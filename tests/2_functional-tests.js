@@ -14,6 +14,7 @@ suite('Functional Tests', () => {
     test("Test /api/translate POST request with text and locale fields", (done) => {
         chai
             .request(server)
+            .keepOpen()
             .post("/api/translate")
             .set("content-type", "application/x-www-form-urlencoded")
             .send({
@@ -43,6 +44,7 @@ suite('Functional Tests', () => {
     test("Test /api/translate POST request with invalid locale field", (done) => {
         chai
             .request(server)
+            .keepOpen()
             .post("/api/translate")
             .set("content-type", "application/x-www-form-urlencoded")
             .send({
@@ -67,6 +69,7 @@ suite('Functional Tests', () => {
     test("Test /api/translate POST request with missing text field", (done) => {
         chai
             .request(server)
+            .keepOpen()
             .post("/api/translate")
             .set("content-type", "application/x-www-form-urlencoded")
             .send({
@@ -90,6 +93,7 @@ suite('Functional Tests', () => {
     test("Test /api/translate POST request with missing locale field", (done) => {
         chai
             .request(server)
+            .keepOpen()
             .post("/api/translate")
             .set("content-type", "application/x-www-form-urlencoded")
             .send({
@@ -113,6 +117,7 @@ suite('Functional Tests', () => {
     test("Test /api/translate POST request with empty text field", (done) => {
         chai
             .request(server)
+            .keepOpen()
             .post("/api/translate")
             .set("content-type", "application/x-www-form-urlencoded")
             .send({
@@ -137,6 +142,7 @@ suite('Functional Tests', () => {
     test("Test /api/translate POST request with text that needs no translation", (done) => {
         chai
             .request(server)
+            .keepOpen()
             .post("/api/translate")
             .set("content-type", "application/x-www-form-urlencoded")
             .send({
